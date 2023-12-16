@@ -1,7 +1,7 @@
 async function errorHandler(err, req, res, next) {
   switch (err.name) {
     case "JsonWebTokenError":
-    case "User Not Found":
+    case "Unauthentification":
       res.status(401).json({ message: "Unauthentification" });
       break;
 

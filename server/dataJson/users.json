@@ -1,0 +1,14 @@
+[
+  {
+    "username": "john doe",
+    "email": "john.doe@example.com",
+    "password": "passw",
+    "gender": "male"
+  },
+  {
+    "username": "alice smith",
+    "email": "alice.smith@example.com",
+    "password": "securepwd",
+    "gender": "female"
+  }
+]

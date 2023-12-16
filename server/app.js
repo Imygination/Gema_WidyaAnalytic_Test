@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send("Server Gema - Test Widya Analytic");
 });
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Server Gema Running - Test Widya Analytic ${port}`);

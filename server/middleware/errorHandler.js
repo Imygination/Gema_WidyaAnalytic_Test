@@ -12,7 +12,12 @@ async function errorHandler(err, req, res, next) {
 
     case "Email and Password cannot empty":
     case "Email or Password wrong":
+    case "Product not Found":
       res.status(400).json({ message: err.name });
+      break;
+
+    case "Product not Found":
+      res.status(404).json({ message: err.name });
       break;
 
     default:

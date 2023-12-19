@@ -75,6 +75,19 @@ class controllerProduct {
       next(error);
     }
   }
+
+  static async findProduct(req, res, next) {
+    const { id } = req.params;
+    const product = await Product.findByPk(id);
+    try {
+      if (!product) {
+        throw { name: "Product Not Found" };
+      }
+      res.status(200).json(product);
+    } catch (error) {
+      next(error);
+    }
+  }
 }
 
 module.exports = controllerProduct;

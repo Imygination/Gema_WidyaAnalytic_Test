@@ -20,6 +20,10 @@ async function errorHandler(err, req, res, next) {
       res.status(404).json({ message: err.name });
       break;
 
+    case "You are not Authorized":
+      res.status(403).json({ message: err.name });
+      break;
+
     default:
       console.log(err);
       res.status(500).json({ message: "Internal Server Error" });

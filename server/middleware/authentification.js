@@ -4,7 +4,7 @@ const { User } = require("../models");
 async function authentification(req, res, next) {
   try {
     const payload = verifyToken(req.headers.access_token);
-    const user = User.findByPk(payload.id);
+    const user = await User.findByPk(payload.id);
     if (!user) {
       throw { name: "Unauthentification" };
     }

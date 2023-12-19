@@ -1,12 +1,10 @@
 import { combineReducers } from "redux";
-// import itemReducer from "./itemReducer";
-// import categoryReducer from "./categoryReducer";
-// import categoryIdReducer from "./categoryIdReducer";
+import itemReducer from "./itemReducer";
+import itemIdReducer from "./itemIdReducer";
 
 const rootReducer = combineReducers({
-  // itemReducer,
-  // categoryReducer,
-  // categoryIdReducer
+  itemReducer,
+  itemIdReducer,
 });
 
 export default rootReducer;

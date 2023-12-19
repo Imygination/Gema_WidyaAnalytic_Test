@@ -39,6 +39,7 @@ function LoginPage() {
       sessionStorage.email = result.email;
       sessionStorage.id = result.id;
       sessionStorage.username = result.username;
+      sessionStorage.gender = result.gender;
       navigate("/");
     } catch (error) {
       console.log(error);
